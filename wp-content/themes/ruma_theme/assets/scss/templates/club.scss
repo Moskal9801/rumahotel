@@ -1,0 +1,123 @@
+.club-page {
+  .club__advantages {
+    .container {
+      h2 {
+        max-width: 1050px;
+        @include small-laptop {
+          max-width: 785px;
+        }
+        @include tablet {
+          max-width: unset;
+        }
+      }
+      .advantages__contents {
+        margin-top: 180px;
+        margin-bottom: 180px;
+        @include small-laptop {
+          margin-top: 120px;
+          margin-bottom: 150px;
+        }
+        @include tablet {
+          margin-top: 100px;
+          margin-bottom: 100px;
+        }
+        .swiper-wrapper {
+          .swiper-slide {
+            .item__info {
+              .info__title {
+                font-size: 16px;
+              }
+              .info__description {
+                font-size: 18px;
+                text-transform: uppercase;
+                @include tablet {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .club__privilege {
+    background-color: $gray;
+    padding-top: 180px;
+    padding-bottom: 220px;
+    @include small-laptop {
+      padding-top: 120px;
+      padding-bottom: 150px;
+    }
+    @include tablet {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        max-width: 890px;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        font-weight: 300;
+        @include small-laptop {
+          max-width: 785px;
+          font-size: 28px;
+        }
+        @include tablet {
+          max-width: unset;
+          font-size: 20px;
+        }
+      }
+      .privilege__status {
+        margin-top: 100px;
+        padding: 40px;
+        max-width: 890px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid $brown;
+        @include small-laptop {
+          margin-top: 80px;
+        }
+        @include tablet {
+          padding: 30px 20px;
+          max-width: unset;
+        }
+        .status__description {
+          text-align: center;
+          font-size: 32px;
+          font-weight: 300;
+          br {
+            @include tablet {
+              display: none;
+            }
+          }
+          @include small-laptop {
+            font-size: 28px;
+          }
+          @include tablet {
+            max-width: 260px;
+            width: 100%;
+            font-size: 20px;
+          }
+        }
+        .status__button {
+          margin-top: 35px;
+          @include small-laptop {
+            margin-top: 40px;
+          }
+          @include tablet {
+            margin-top: 30px;
+          }
+          @include hover {
+            border: 1px solid $brown;
+          }
+        }
+      }
+    }
+  }
+}

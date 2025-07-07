@@ -1,0 +1,1 @@
+[27-Mar-2024 06:09:36 UTC] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in W:\domains\ruma-hotel\wp-includes\Requests\src\Transport\Curl.php on line 510

@@ -1,0 +1,14 @@
+.booking-page {
+  .booking__frame {
+    padding-top: 220px;
+    padding-bottom: 220px;
+    @include small-laptop {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    @include tablet {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+}

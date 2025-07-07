@@ -1,0 +1,239 @@
+.main-footer {
+  background-color: $light-black;
+  .header-container {
+    padding-top: 140px;
+    padding-bottom: 65px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: '. menu contacts documents' 'logo menu appeals copyright';
+    gap: 0 50px;
+    @include small-laptop {
+      padding-top: 70px;
+      padding-bottom: 20px;
+    }
+    @include tablet {
+      padding-top: 90px;
+      padding-bottom: 40px;
+      grid-template-columns: repeat(2, auto);
+      grid-template-areas: 'logo contacts' 'menu menu' 'appeals appeals' 'copyright copyright' 'documents documents';
+      gap: unset;
+    }
+    .main-footer__logo {
+      grid-area: logo;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      opacity: 1;
+      transition: opacity $transition;
+      @include hover {
+        opacity: 0.65;
+      }
+      svg {
+        display: flex;
+        width: 90px;
+        height: 200px;
+      }
+    }
+    .main-footer__menu {
+      grid-area: menu;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include tablet {
+        margin-top: 65px;
+        padding-top: 65px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+      .menu__item {
+        margin-top: 25px;
+        font-size: 24px;
+        line-height: 130%;
+        color: $white;
+        transition: color $transition;
+        &:first-child {
+          margin-top: unset;
+        }
+        @include small-laptop {
+          margin-top: 20px;
+        }
+        &.active {
+          color: $brown;
+        }
+        @include hover {
+          color: $brown;
+        }
+      }
+    }
+    .main-footer__contacts {
+      grid-area: contacts;
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        justify-content: flex-end;
+        margin-left: 40px;
+      }
+      .contacts__item {
+        margin-top: 15px;
+        font-size: 20px;
+        color: $white;
+        &:first-child {
+          margin-top: unset;
+        }
+        @include small-laptop {
+          font-size: 18px;
+        }
+      }
+      a.contacts__item {
+        transition: color $transition;
+        @include hover {
+          color: $brown;
+        }
+      }
+      .contacts__socials {
+        display: none;
+        @include tablet {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .socials__item {
+            margin-left: 10px;
+            &:first-child {
+              margin-left: unset;
+            }
+            svg {
+              display: flex;
+              width: 32px;
+              height: 32px;
+              circle {
+                fill: rgba(0,0,0,0);
+                transition: fill $transition;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-footer__appeals {
+      grid-area: appeals;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      @include tablet {
+        margin-top: 65px;
+        align-items: unset;
+      }
+      .appeals__socials {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include small-laptop {
+          margin-top: 15px;
+        }
+        @include tablet {
+          display: none;
+        }
+        .socials__item {
+          margin-left: 10px;
+          &:first-child {
+            margin-left: unset;
+          }
+          svg {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            @include small-laptop {
+              width: 32px;
+              height: 32px;
+            }
+            circle {
+              fill: rgba(0,0,0,0);
+              transition: fill $transition;
+            }
+          }
+          @include hover {
+            svg {
+              circle {
+                fill: $brown;
+              }
+            }
+          }
+        }
+      }
+    }
+    .more-footer__documents {
+      grid-area: documents;
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        margin-top: 10px;
+      }
+      .documents__paykeeper {
+        margin-top: 15px;
+        @include tablet {
+          margin-top: 10px;
+        }
+        img {
+          width: 285px;
+          height: auto;
+        }
+      }
+      .documents__item {
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 125%;
+        color: $white;
+        opacity: 0.8;
+        transition: color $transition, opacity $transition;
+        &:first-child {
+          margin-top: unset;
+        }
+        @include tablet {
+          margin-top: 10px;
+        }
+        @include hover {
+          color: $brown;
+          opacity: 1;
+        }
+      }
+    }
+    .more-footer__copyright {
+      grid-area: copyright;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      @include tablet {
+        margin-top: 65px;
+      }
+      .copyright__item {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 125%;
+        color: $white;
+        opacity: 0.8;
+        &.studio {
+          margin-top: 15px;
+          opacity: 1;
+          @include tablet {
+            margin-top: 10px;
+          }
+          span {
+            opacity: 0.8;
+          }
+          a {
+            opacity: 1;
+            color: $brown;
+            transition: color $transition, opacity $transition;
+            @include hover {
+              color: $white;
+              opacity: .8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

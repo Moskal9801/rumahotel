@@ -1,0 +1,78 @@
+.error-page {
+  .error-page__error {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    .error__background {
+      width: 100%;
+      height: 100%;
+      &:before {
+        content: '';
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .error__info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      h2 {
+        color: $white;
+        font-size: 80px;
+        @include small-laptop {
+          font-size: 72px;
+        }
+        @include tablet {
+          font-size: 32px;
+        }
+      }
+      h6 {
+        margin-top: 15px;
+        font-weight: 400;
+        max-width: 575px;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        @include small-laptop {
+          max-width: 425px;
+          font-size: 18px;
+        }
+        @include tablet {
+          max-width: 260px;
+          font-size: 16px;
+        }
+      }
+      a {
+        margin-top: 40px;
+        @include small-laptop {
+          margin-top: 30px;
+        }
+        @include tablet {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}

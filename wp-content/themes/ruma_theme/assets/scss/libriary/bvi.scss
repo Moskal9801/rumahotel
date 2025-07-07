@@ -1,0 +1,137 @@
+.bvi-body[data-bvi-theme=black] #hamburger-icon .line {
+	background-color: white !important;
+}
+
+.bvi-body[data-bvi-theme=white] #hamburger-icon .line {
+	background-color: black !important;
+}
+
+.bvi-body[data-bvi-theme=blue] #hamburger-icon .line {
+	background-color: #063462 !important;
+}
+
+.bvi-body[data-bvi-theme=brown] #hamburger-icon .line {
+	background-color: #4D4B43 !important;
+}
+
+.bvi-body[data-bvi-theme=green] #hamburger-icon .line {
+	background-color: #A9E44D !important;
+}
+
+
+.bvi-body[data-bvi-theme=black] .lines .lines__line,
+.bvi-body[data-bvi-theme=black] .cookie,
+.bvi-body[data-bvi-theme=black] .main-header {
+	background-color: #000 !important;
+}
+
+.bvi-body[data-bvi-theme=white] .lines .lines__lin,
+.bvi-body[data-bvi-theme=white] .cookie,
+.bvi-body[data-bvi-theme=white] .main-header {
+	background-color: #FFF !important;
+}
+
+.bvi-body[data-bvi-theme=blue] .lines .lines__lin,
+.bvi-body[data-bvi-theme=blue] .cookie,
+.bvi-body[data-bvi-theme=blue] .main-header {
+	background-color: #9DD1FF !important;
+}
+
+.bvi-body[data-bvi-theme=brown].lines .lines__lin,
+.bvi-body[data-bvi-theme=brown].cookie,
+.bvi-body[data-bvi-theme=brown].main-header {
+	background-color: #F7F3D6 !important;
+}
+
+.bvi-body[data-bvi-theme=green] .lines .lines__line,
+.bvi-body[data-bvi-theme=green] .cookie,
+.bvi-body[data-bvi-theme=green] .main-header {
+	background-color: #3B2716 !important;
+}
+
+
+html body .bvi-panel, html body .bvi-panel.bvi-fixed-top {
+	top:      unset !important;
+	bottom:   -6px;
+	position: fixed !important;
+}
+
+.bvi-active footer {
+	margin-bottom: 140px;
+	@media (max-width: 590px) {
+		margin-bottom: 240px;
+	}
+}
+
+.bvi-active .home-page__menu {
+	padding-bottom: 106px;
+	@media (max-width: 1015px) {
+		padding-bottom: 197px;
+	}
+	@media (max-width: 590px) {
+		padding-bottom: 287px;
+	}
+}
+
+
+.no-background.open-menu .bvi-open {
+
+	svg {
+		path {
+			stroke: #1B1B1B;
+
+		}
+	}
+
+
+}
+
+
+.no-background,
+.header__control.active {
+	.bvi-open {
+		svg {
+			path {
+				stroke: white;
+
+			}
+		}
+
+
+	}
+}
+
+
+.bvi-open {
+	margin-right: 20px;
+	line-height:  1em;
+	width: 33px;
+	height: 33px;
+	position: relative;
+	@include mobile {
+		margin: 0 5px;
+	}
+	&:hover {
+
+		svg {
+			path {
+				stroke: #B08A62;
+
+
+			}
+		}
+	}
+
+
+	svg {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		path {
+			transition: stroke .4s ease-in-out;
+			stroke:     #1B1B1B;
+
+		}
+	}
+
+}

@@ -1,0 +1,396 @@
+.single-page {
+  &.single-rooms {
+    padding-top: unset !important;
+  }
+  padding-top: 95px;
+  @include small-laptop {
+    padding-top: 85px;
+  }
+  @include tablet {
+    padding-top: 70px;
+  }
+  .single-rooms {
+    .single-page__advantages {
+      .container {
+        h2 {
+          max-width: 1460px;
+          @include small-laptop {
+            max-width: 1110px;
+          }
+        }
+      }
+    }
+    .single-page__other {
+      padding-top: 200px;
+      padding-bottom: 200px;
+      background-color: $gray;
+      @include small-laptop {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+      @include tablet {
+        padding-top: unset;
+        padding-bottom: unset;
+        background-color: unset;
+      }
+      .container {
+        .other__items {
+          @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 10px;
+          }
+          .items__item {
+            @include tablet {
+              min-width: 340px;
+            }
+            &:nth-child(4n+1), &:nth-child(4n+5) {
+              .item__image {
+                @include tablet {
+                  height: 280px;
+                }
+              }
+            }
+            &:nth-child(4n+2), &:nth-child(4n+6) {
+              .item__image {
+                @include tablet {
+                  height: 280px;
+                }
+              }
+            }
+            &:nth-child(4n+3), &:nth-child(4n+7) {
+              .item__image {
+                @include tablet {
+                  height: 280px;
+                }
+              }
+            }
+            &:nth-child(4n+4), &:nth-child(4n+8) {
+              .item__image {
+                @include tablet {
+                  height: 280px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .single-page__rooms {
+      padding-top: 220px;
+      padding-bottom: 220px;
+      @include small-laptop {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+      @include tablet {
+        padding-top: 170px;
+        padding-bottom: 100px;
+      }
+      .container {
+        .rooms__title {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          a {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color $transition;
+            @include hover {
+              color: $brown;
+            }
+            @include small-laptop {
+              font-size: 14px;
+            }
+            @include tablet {
+              font-size: 12px;
+            }
+          }
+        }
+        .rooms__contents {
+          display: flex;
+          flex-direction: column;
+          margin-top: 65px;
+          @include small-laptop {
+            margin-top: 40px;
+          }
+          @include tablet {
+            margin-top: 30px;
+          }
+          .contents__items {
+            padding: 50px 0;
+            position: relative;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            @include small-laptop {
+              padding: 30px 0;
+            }
+            @include hover {
+              .items__name {
+                color: $black;
+              }
+              .items__more {
+                max-height: 0;
+                margin-top: 25px;
+                @include small-laptop {
+                  margin-top: 20px;
+                }
+                .more__arrow {
+                  opacity: 1;
+                }
+              }
+              .items__background {
+                opacity: 1;
+              }
+            }
+            .items__name {
+              font-size: 64px;
+              font-weight: 300;
+              line-height: 100%;
+              color: $gray-600;
+              text-transform: uppercase;
+              transition: color .55s ease-in-out;
+              @include small-laptop {
+                font-size: 32px;
+              }
+              @include tablet {
+                font-size: 24px;
+              }
+            }
+            .items__more {
+              max-height: 0;
+              height: 100%;
+              overflow: hidden;
+              margin-left: 20px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              transition: margin-top .55s ease-in-out, max-height .55s ease-in-out;
+              @include small-laptop {
+                margin-left: 15px;
+              }
+              @include tablet {
+                overflow: unset;
+                margin-top: 30px;
+                margin-left: 10px;
+                align-items: flex-start;
+                max-height: unset;
+              }
+              .more__rooms {
+                display: grid;
+                grid-template-columns: 200px 200px;
+                gap: 20px 40px;
+                @include small-laptop {
+                  grid-template-columns: 180px 180px;
+                  gap: 20px;
+                }
+                @include tablet {
+                  grid-template-columns: auto auto;
+                  gap: 25px;
+                }
+                .rooms__item {
+                  display: grid;
+                  grid-template-columns: 10px auto;
+                  align-items: center;
+                  gap: 10px;
+                  @include hover {
+                    p {
+                      color: $black;
+                    }
+                  }
+                  svg {
+                    width: 100%;
+                    height: auto;
+                  }
+                  p {
+                    font-size: 18px;
+                    line-height: 100%;
+                    color: $gray-600;
+                    text-transform: uppercase;
+                    transition: color .55s ease-in-out;
+                    @include small-laptop {
+                      font-size: 16px;
+                    }
+                    @include tablet {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+              .more__arrow {
+                margin-top: -50px;
+                opacity: 0;
+                transition: opacity .55s ease-in-out;
+                @include small-laptop {
+                  margin-top: -40px;
+                }
+                @include tablet {
+                  margin-top: -10px;
+                  opacity: 1;
+                  width: 32px;
+                  height: 32px;
+                }
+              }
+            }
+            .items__background {
+              position: absolute;
+              right: 200px;
+              bottom: -90px;
+              width: 575px;
+              height: 660px;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity .55s ease-in-out;
+              @include laptop {
+                width: 460px;
+                height: 530px;
+              }
+              @include small-laptop {
+                width: 360px;
+                height: 420px;
+                bottom: -150px;
+              }
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .contents__item {
+            position: relative;
+            @include hover {
+              .item__info {
+                p {
+                  color: $black;
+                }
+                svg {
+                  opacity: 1;
+                }
+              }
+              .item__background {
+                opacity: 1;
+                pointer-events: unset;
+              }
+            }
+            .item__info {
+              padding: 50px 0;
+              border-top: 1px solid rgba(0,0,0,0.1);
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              @include small-laptop {
+                padding: 30px 0;
+              }
+              p {
+                font-size: 64px;
+                font-weight: 300;
+                line-height: 100%;
+                color: $gray-600;
+                text-transform: uppercase;
+                transition: color .55s ease-in-out;
+                @include small-laptop {
+                  font-size: 32px;
+                }
+                @include tablet {
+                  font-size: 24px;
+                }
+              }
+              svg {
+                opacity: 0;
+                transition: opacity .55s ease-in-out;
+                @include tablet {
+                  width: 32px;
+                  height: 32px;
+                  opacity: 1;
+                }
+              }
+            }
+            .item__background {
+              position: absolute;
+              right: 200px;
+              bottom: -90px;
+              width: 575px;
+              height: 660px;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity .55s ease-in-out;
+              @include laptop {
+                width: 460px;
+                height: 530px;
+              }
+              @include small-laptop {
+                width: 360px;
+                height: 420px;
+                bottom: -150px;
+              }
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .single-page__other {
+    padding-bottom: 220px;
+    @include small-laptop {
+      padding-bottom: 150px;
+    }
+    @include tablet {
+      padding-bottom: 100px;
+    }
+    .container {
+      .other__title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        a {
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          transition: color $transition;
+          @include hover {
+            color: $brown;
+          }
+          @include small-laptop {
+            font-size: 14px;
+          }
+          @include tablet {
+            font-size: 12px;
+          }
+        }
+      }
+      .other__items {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 65px 20px;
+        @include small-laptop {
+          margin-top: 50px;
+        }
+        @include tablet {
+          margin-top: 30px;
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+.special__button-book {
+  margin-top: 30px;
+}

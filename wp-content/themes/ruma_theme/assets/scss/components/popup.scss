@@ -1,0 +1,313 @@
+.mfp-container {
+  padding: unset;
+}
+
+.special {
+  position: relative;
+  margin: 0 auto;
+  max-width: 910px;
+  width: 100%;
+  background-color: $white;
+  @include laptop {
+    max-width: 590px;
+  }
+  @include tablet {
+    margin: 10px;
+    max-width: unset;
+    width: unset;
+  }
+  .popup__close {
+    position: absolute;
+    padding: unset;
+    opacity: unset;
+    width: 25px;
+    height: 25px;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+    @include laptop {
+      right: 30px;
+      top: 30px;
+    }
+    @include tablet {
+      width: 20px;
+      height: 20px;
+      top: 15px;
+      right: 15px;
+    }
+    &.light {
+      path {
+        stroke: $white;
+      }
+    }
+    path {
+      opacity: unset;
+      stroke: $black;
+      transition: stroke 0.4s ease-in-out;
+    }
+    @include hover {
+      path {
+        stroke: $brown;
+      }
+    }
+  }
+  .special__content {
+    display: flex;
+    flex-direction: column;
+    .content__image {
+      width: 100%;
+      height: 420px;
+      @include laptop {
+        height: 270px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content__info {
+      padding: 40px 40px 65px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include laptop {
+        padding: 40px 30px 40px 30px;
+        align-items: unset;
+      }
+      @include tablet {
+        padding: 30px 20px 30px 20px;
+      }
+      .info__date {
+        font-size: 14px;
+        font-weight: 300;
+        color: $gray-700;
+        text-transform: uppercase;
+        @include laptop {
+          font-size: 12px;
+        }
+      }
+      .info__name {
+        margin-top: 10px;
+        font-size: 48px;
+        @include laptop {
+          font-size: 32px;
+        }
+        @include tablet {
+          font-size: 24px;
+        }
+      }
+      .info__description {
+        margin-top: 25px;
+        margin-bottom: 40px;
+        font-size: 24px;
+        color: $gray-800;
+        @include laptop {
+          margin-top: 20px;
+          font-size: 18px;
+          margin-bottom: 32px;
+        }
+        @include tablet {
+          margin-bottom: 24px;
+          margin-top: 15px;
+          font-size: 16px;
+        }
+      }
+
+    }
+  }
+}
+
+.popup {
+  position: relative;
+  margin-left: auto;
+  padding: 90px 40px 90px 40px;
+  max-width: 1080px;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  @include small-laptop {
+    padding: 40px;
+    max-width: 630px;
+  }
+  @include tablet {
+    height: 100%;
+    max-width: unset;
+    padding: 40px 20px;
+  }
+  .popup__close {
+    position: absolute;
+    padding: unset;
+    opacity: unset;
+    width: 25px;
+    height: 25px;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+    @include tablet {
+      width: 20px;
+      height: 20px;
+      top: 15px;
+      right: 15px;
+    }
+    path {
+      opacity: unset;
+      stroke: $black;
+      transition: stroke 0.4s ease-in-out;
+    }
+    @include hover {
+      path {
+        stroke: $brown;
+      }
+    }
+  }
+  &.popup-form {
+    .popup__forms {
+      display: flex;
+      flex-direction: column;
+      .forms__title {
+        font-size: 70px;
+        line-height: 100%;
+        @include small-laptop {
+          font-size: 32px;
+        }
+        @include tablet {
+          font-size: 24px;
+        }
+      }
+      .forms__description {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        color: $gray-800;
+        @include small-laptop {
+          margin-bottom: 10px;
+          font-size: 16px;
+          br {
+            display: none;
+          }
+        }
+        @include tablet {
+          margin-bottom: unset;
+          font-size: 14px;
+        }
+      }
+      .wpcf7 {
+        .item, .items {
+          margin-top: 20px;
+          @include small-laptop {
+            margin-top: 10px;
+          }
+        }
+        textarea {
+          margin-top: unset;
+        }
+      }
+    }
+  }
+  &.popup-sent, &.popup-failed {
+    padding: 100px 40px 70px 40px;
+    max-width: 910px;
+    height: 100%;
+    margin-right: auto;
+    @include small-laptop {
+      padding: 80px 30px;
+      max-width: 590px;
+    }
+    @include tablet {
+      padding: 40px 20px;
+      max-width: unset;
+    }
+    .popup__answer {
+      display: flex;
+      flex-direction: column;
+      .answer__title {
+        font-size: 48px;
+        @include small-laptop {
+          font-size: 32px;
+        }
+        @include tablet {
+          font-size: 24px;
+        }
+      }
+      .answer__description {
+        margin-top: 25px;
+        font-size: 24px;
+        color: $gray-800;
+        br {
+          @include small-laptop {
+            display: none;
+          }
+        }
+        @include small-laptop {
+          margin-top: 20px;
+          font-size: 18px;
+        }
+        @include tablet {
+          margin-top: 15px;
+          font-size: 16px;
+        }
+      }
+      .answer__contacts {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include small-laptop {
+          margin-top: 30px;
+        }
+        @include tablet {
+          margin-top: 25px;
+          flex-direction: column;
+          align-items: unset;
+        }
+        a {
+          &:first-child {
+            margin-right: 20px;
+            @include tablet {
+              margin-right: unset;
+            }
+            @include hover {
+              color: $black;
+              border: 1px solid $brown;
+            }
+          }
+          &:last-child {
+            border: 1px solid $brown;
+            color: $black;
+            transition: background-color $transition, color $transition;
+            @include tablet {
+              margin-top: 10px;
+            }
+            @include hover {
+              background-color: $brown;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html body .border-button.popup__button {
+  color: black;
+  border: 1px solid $brown;
+  transition: color $transition, background-color $transition;
+  &:hover {
+    color:$white;
+  }
+}
+
+.popup__info-block {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  @include tablet {
+    gap: 10px;
+
+    flex-direction: column;
+ }
+}
+

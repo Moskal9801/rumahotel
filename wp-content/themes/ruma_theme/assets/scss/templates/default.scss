@@ -1,0 +1,428 @@
+.default-page, .single-page {
+  padding-top: 95px;
+  @include small-laptop {
+    padding-top: 85px;
+  }
+  @include tablet {
+    padding-top: 70px;
+  }
+  .default-page__default, .single-page__default {
+    padding-top: 100px;
+    padding-bottom: 220px;
+    @include small-laptop {
+      padding-top: 65px;
+      padding-bottom: 150px;
+    }
+    @include tablet {
+      padding-top: 40px;
+      padding-bottom: 100px;
+    }
+    .default-container {
+      .default__date {
+        font-size: 18px;
+        font-weight: 300;
+        color: $gray-700;
+        @include small-laptop {
+          font-size: 16px;
+        }
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+      .default__title {
+        margin-top: 15px;
+      }
+      .default__contents {
+        h1 {
+          margin-top: 40px;
+          @include small-laptop {
+            margin-top: 30px;
+          }
+          @include tablet {
+            margin-top: 25px;
+          }
+        }
+        h2 {
+          margin-top: 40px;
+          @include small-laptop {
+            margin-top: 30px;
+          }
+          @include tablet {
+            margin-top: 25px;
+          }
+        }
+        h3 {
+          margin-top: 30px;
+          @include small-laptop {
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 15px;
+          }
+        }
+        h4 {
+          margin-top: 30px;
+          @include small-laptop {
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 15px;
+          }
+        }
+        h5 {
+          margin-top: 30px;
+          @include small-laptop {
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 15px;
+          }
+        }
+        h6 {
+          margin-top: 30px;
+          @include small-laptop {
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 15px;
+          }
+        }
+        p {
+          margin-top: 30px;
+          font-size: 18px;
+          color: $gray-700;
+          @include small-laptop {
+            font-size: 16px;
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 15px;
+            font-size: 14px;
+          }
+          strong {
+            font-weight: 600;
+          }
+          a {
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color $transition;
+            @include hover {
+              color: $brown;
+            }
+          }
+        }
+        ul {
+          margin-top: 30px;
+          margin-left: 20px;
+          list-style: disc;
+          @include small-laptop {
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 15px;
+          }
+          li {
+            margin-top: 5px;
+            font-size: 18px;
+            line-height: 150%;
+            color: $gray-700;
+            &:first-child {
+              margin-top: unset;
+            }
+            @include small-laptop {
+              font-size: 16px;
+            }
+            @include tablet {
+              font-size: 14px;
+            }
+            ul {
+              margin-top: unset;
+              margin-left: 22px;
+              li {
+                margin-top: 5px !important;
+              }
+            }
+          }
+        }
+        ol {
+          margin-top: 30px;
+          margin-left: 20px;
+          list-style: decimal;
+          @include small-laptop {
+            margin-top: 20px;
+          }
+          @include tablet {
+            margin-top: 15px;
+          }
+          li {
+            margin-top: 5px;
+            font-size: 18px;
+            line-height: 150%;
+            color: $gray-700;
+            &:first-child {
+              margin-top: unset;
+            }
+            @include small-laptop {
+              font-size: 16px;
+            }
+            @include tablet {
+              font-size: 14px;
+            }
+            ul {
+              margin-top: unset;
+              margin-left: 22px;
+              li {
+                margin-top: 5px !important;
+              }
+            }
+          }
+        }
+        .wp-block-image {
+          margin-top: 40px;
+          width: 100%;
+          height: 100%;
+          @include small-laptop {
+            margin-top: 30px;
+          }
+          @include tablet {
+            margin-top: 25px;
+          }
+          img {
+            display: block;
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            @include small-laptop {
+              height: 500px;
+            }
+            @include tablet {
+              height: 270px;
+            }
+          }
+          figcaption {
+            margin-top: 20px;
+            margin-bottom: unset;
+            line-height: 150%;
+            color: $gray-700;
+            @include small-laptop {
+              font-size: 16px;
+            }
+            @include tablet {
+              margin-top: 10px;
+              font-size: 14px;
+            }
+          }
+        }
+        .wp-block-embed {
+          margin-top: 40px;
+          width: 100%;
+          height: 100%;
+          @include small-laptop {
+            margin-top: 30px;
+          }
+          @include tablet {
+            margin-top: 25px;
+          }
+          .wp-block-embed__wrapper {
+            width: 100%;
+            height: 100%;
+          }
+          iframe {
+            display: block;
+            width: 100%;
+            height: 700px;
+            @include small-laptop {
+              height: 500px;
+            }
+            @include tablet {
+              height: 270px;
+            }
+          }
+        }
+        .wp-block-quote {
+          margin-top: 40px;
+          padding-left: 30px;
+          display: flex;
+          flex-direction: column;
+          border-left: 4px solid $black;
+          @include small-laptop {
+            margin-top: 30px;
+            padding-left: 20px;
+          }
+          @include tablet {
+            margin-top: 25px;
+          }
+          p {
+            margin-top: 15px;
+            font-style: italic;
+            order: 2;
+            font-size: 18px;
+            line-height: 150%;
+            color: $gray-700;
+            @include small-laptop {
+              font-size: 16px;
+            }
+            @include tablet {
+              font-size: 14px;
+            }
+          }
+          cite {
+            font-style: normal;
+            order: 1;
+            font-size: 18px;
+            line-height: 150%;
+            color: $gray-700;
+            @include small-laptop {
+              font-size: 16px;
+            }
+            @include tablet {
+              font-size: 14px;
+            }
+          }
+        }
+        .wp-block-table {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          @include small-laptop {
+            margin-top: 30px;
+          }
+          @include tablet {
+            margin-top: 25px;
+          }
+          table {
+            margin-top: 20px;
+            order: 2;
+            border-collapse: collapse;
+            thead {
+              border: unset;
+              tr {
+                th {
+                  border-top: unset;
+                  border-bottom: unset;
+                  border-left: unset;
+                  border-right: 1px solid #D8D8D8;
+                  padding: 25px 30px;
+                  font-size: 18px;
+                  font-weight: 500;
+                  color: $white;
+                  background-color: $brown;
+                  text-align: left;
+                  @include small-laptop {
+                    font-size: 16px;
+                  }
+                  @include tablet {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            tbody {
+              border: unset;
+              tr {
+                td {
+                  border: 1px solid #D8D8D8;
+                  padding: 25px 30px;
+                  font-size: 18px;
+                  line-height: 150%;
+                  color: $gray-700;
+                  text-align: left;
+                  @include small-laptop {
+                    font-size: 16px;
+                  }
+                  @include tablet {
+                    font-size: 14px;
+                  }
+                }
+                &:nth-child(even) {
+                  td {
+                    background-color: $gray;
+                  }
+                }
+              }
+            }
+          }
+          figcaption {
+            order: 1;
+            line-height: 150%;
+            color: $gray-700;
+          }
+        }
+        .swiper-acf-block-default {
+          margin-top: 40px;
+          @include small-laptop {
+            margin-top: 30px;
+          }
+          @include tablet {
+            margin-top: 25px;
+          }
+          .swiper-wrapper {
+            .swiper-slide {
+              width: 1000px;
+              height: 700px;
+              @include small-laptop {
+                height: 500px;
+              }
+              @include tablet {
+                height: 270px;
+              }
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .swiper-control {
+            display: none;
+            @include tablet {
+              margin-top: 15px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+            }
+            .swiper-pagination {
+              display: flex;
+              justify-content: space-between;
+              position: relative;
+              top: unset;
+              bottom: unset;
+              left: unset;
+              right: unset;
+              .swiper-pagination-bullet {
+                height: 2px;
+                flex: 1;
+                background: $brown;
+                border-radius: 100px;
+                opacity: 0.5;
+                transition: opacity $transition;
+                &.swiper-pagination-bullet-active {
+                  opacity: 1;
+                }
+              }
+            }
+            .swiper-navigation {
+              margin-left: 10px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              .swiper-btn {
+                margin-top: 5px;
+                opacity: 1;
+                transition: opacity $transition;
+                &.next {
+                  margin-left: 15px;
+                }
+                &.swiper-button-disabled {
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

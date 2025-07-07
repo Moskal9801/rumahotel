@@ -1,0 +1,133 @@
+.conference-page {
+  .conference__advantages {
+    .container {
+      h2 {
+        margin-top: 200px;
+        max-width: 1620px;
+        @include small-laptop {
+          margin-top: 150px;
+          max-width: 1020px;
+        }
+        @include tablet {
+          margin-top: 100px;
+        }
+      }
+      .advantages__contents {
+        margin-top: unset;
+      }
+    }
+  }
+  .conference__reverse {
+    padding-top: 220px;
+    @include small-laptop {
+      padding-top: 150px;
+    }
+    @include tablet {
+      padding-top: 100px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      @include tablet {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .reverse__item {
+        display: grid;
+        grid-template-rows: 700px auto;
+        @include small-laptop {
+          grid-template-rows: 450px auto;
+        }
+        @include tablet {
+          grid-template-rows: 355px auto;
+        }
+        &.big-hall {
+          .item__info {
+            .info__more {
+              margin-top: 25px;
+            }
+          }
+        }
+        .item__gallery {
+          width: 100%;
+          height: 700px;
+          @include small-laptop {
+            height: 450px;
+          }
+          @include tablet {
+            height: 355px;
+          }
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .item__info {
+          margin-top: 30px;
+          display: flex;
+          flex-direction: column;
+          .info__title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .title__title {
+              font-size: 32px;
+              text-transform: uppercase;
+              @include small-laptop {
+                font-size: 24px;
+              }
+              @include tablet {
+                font-size: 18px;
+              }
+            }
+            .title__price {
+              font-size: 18px;
+              text-transform: uppercase;
+              @include small-laptop {
+                font-size: 16px;
+              }
+              @include tablet {
+                font-size: 14px;
+              }
+            }
+          }
+          .info__description {
+            margin-top: 15px;
+          }
+          .info__more {
+            margin-top: auto;
+            display: grid;
+            /*grid-template-columns: auto auto;*/
+            grid-template-columns: 1fr;
+            gap: 15px;
+            @include tablet {
+              margin-top: 25px !important;
+              grid-template-columns: auto;
+              gap: 10px;
+            }
+            .more__button {
+              width: 100%;
+              @include tablet {
+                padding: 15px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .conference__gallery {
+    padding-bottom: 220px;
+    @include small-laptop {
+      padding-bottom: 150px;
+    }
+    @include tablet {
+      padding-bottom: 100px;
+    }
+  }
+}
